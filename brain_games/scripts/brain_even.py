@@ -32,7 +32,9 @@ def main():
             print('Correct!')
             counter += 1
         else:
-            print('\'', answer, '\' is wrong answer ;(. Correct answer was \'', true_answer, '\'.', sep = '')
+            print('\'', answer, '\' is wrong answer ;(. Correct answer was \'', true_answer, '\'.', 
+                  '\nLet\'s try again, ', name, sep = '')
+            break
 
 
 if __name__ == '__main__':

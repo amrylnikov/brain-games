@@ -12,7 +12,6 @@ sys.path.insert(0, parentdir)
 
 from cli import welcome_user
 
-
 def main():
     print('Welcome to the Brain Games!')
     welcome_user()
