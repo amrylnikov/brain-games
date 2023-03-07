@@ -1,4 +1,5 @@
 import random
+import math
 import prompt
 
 
@@ -24,19 +25,17 @@ def game_body(condition_outrut, input_type, generation_func):
                   '\nLet\'s try again, ', name, '!', sep = '')
             break
 
-def even():
-    number = random.randint(0,100)
-    if number % 2 == 0:
-        true_answer = 'yes'
-    else:
-        true_answer = 'no'
+def gcd_brain():
+    number1 = random.randint(1,50)
+    number2 = random.randint(1,50)
+    number = str(number1) + ' ' + str(number2)
+    true_answer = math.gcd(number1,number2)
     return number, true_answer
 
 def main():
-    condition = 'Answer "yes" if the number is even, otherwise answer "no".'
-    number = random.randint(0,100)
-    input_type = 'string'
-    game_body(condition, input_type, even)
+    condition = 'Find the greatest common divisor of given numbers.'
+    input_type = 'integer'
+    game_body(condition, input_type, gcd_brain)
 
 if __name__ == '__main__':
     main()

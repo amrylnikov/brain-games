@@ -24,19 +24,25 @@ def game_body(condition_outrut, input_type, generation_func):
                   '\nLet\'s try again, ', name, '!', sep = '')
             break
 
-def even():
-    number = random.randint(0,100)
-    if number % 2 == 0:
-        true_answer = 'yes'
+def calc():
+    number1 = random.randint(0,20)
+    number2 = random.randint(0,10)
+    options = '+','-','*'
+    operator = random.choice(options)
+    print (operator)
+    number = str(number1) + ' ' + operator + ' ' + str(number2)
+    if operator == '+':
+        true_answer = number1 + number2
+    elif operator == '-':
+        true_answer = number1 - number2
     else:
-        true_answer = 'no'
+        true_answer = number1 * number2
     return number, true_answer
 
 def main():
-    condition = 'Answer "yes" if the number is even, otherwise answer "no".'
-    number = random.randint(0,100)
-    input_type = 'string'
-    game_body(condition, input_type, even)
+    condition = 'What is the result of the expression?'
+    input_type = 'integer'
+    game_body(condition, input_type, calc)
 
 if __name__ == '__main__':
     main()
