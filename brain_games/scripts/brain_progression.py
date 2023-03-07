@@ -23,7 +23,7 @@ def game_body(condition_outrut, input_type, generation_func):
             print('\'', answer,
                   '\' is wrong answer ;(. Correct answer was \'',
                   true_answer, '\'.',
-                  '\nLet\'s try again, ', name, '!', sep = '')
+                  '\nLet\'s try again, ', name, '!', sep='')
             break
     if counter == 3:
         print('Congratulations, ', name, '!', sep='')
@@ -34,9 +34,9 @@ def progression():
     first_number = random.randint(0, 10)
     progression_step = random.randint(0, 10)
     hidden_number = random.randint(0, progression_length - 1)
-    a = [0]*progression_length
+    a = [0] * progression_length
     question_string = ''
-    for i in range (progression_length):
+    for i in range(progression_length):
         a[i] = str(first_number + progression_step * (i + 1))
         if i == hidden_number:
             question_string += '..' + ' '

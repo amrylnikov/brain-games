@@ -21,9 +21,9 @@ def game_body(condition_outrut, input_type, generation_func):
             counter += 1
         else:
             print('\'', answer,
-                '\' is wrong answer ;(. Correct answer was \'',
-                true_answer, '\'.',
-                '\nLet\'s try again, ', name, '!', sep = '')
+                  '\' is wrong answer ;(. Correct answer was \'',
+                  true_answer, '\'.',
+                  '\nLet\'s try again, ', name, '!', sep='')
             break
     if counter == 3:
         print('Congratulations, ', name, '!', sep='')
@@ -41,13 +41,14 @@ def is_prime(a):
 
 
 def prime():
-    number = random.randint(0,100)
+    number = random.randint(0, 100)
     true_answer = is_prime(number)
     return number, true_answer
 
 
 def main():
-    condition = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'
+    condition = ('Answer \"yes\" if given number\
+                  is prime. Otherwise answer \"no\".')
     input_type = 'string'
     game_body(condition, input_type, prime)
 

@@ -21,9 +21,9 @@ def game_body(condition_outrut, input_type, generation_func):
             counter += 1
         else:
             print('\'', answer,
-                   '\' is wrong answer ;(. Correct answer was \'',
+                  '\' is wrong answer ;(. Correct answer was \'',
                   true_answer, '\'.',
-                  '\nLet\'s try again, ', name, '!', sep = '')
+                  '\nLet\'s try again, ', name, '!', sep='')
             break
     if counter == 3:
         print('Congratulations, ', name, '!', sep='')

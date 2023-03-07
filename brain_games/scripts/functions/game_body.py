@@ -20,16 +20,21 @@ def game_body(condition_outrut, input_type, generation_func):
             print('Correct!')
             counter += 1
         else:
-            print('\'', answer, '\' is wrong answer ;(. Correct answer was \'', true_answer, '\'.', 
-                  '\nLet\'s try again, ', name, '!', sep = '')
+            print('\'', answer,
+                  '\' is wrong answer ;(. Correct answer was \'',
+                  true_answer, '\'.',
+                  '\nLet\'s try again, ', name, '!', sep='')
             break
+    if counter == 3:
+        print('Congratulations, ', name, '!', sep='')
+
 
 def in_cycle():
-    number1 = random.randint(0,20)
-    number2 = random.randint(0,10)
-    options = '+','-','*'
+    number1 = random.randint(0, 20)
+    number2 = random.randint(0, 10)
+    options = '+', '-', '*'
     operator = random.choice(options)
-    print (operator)
+    print(operator)
     number = str(number1) + ' ' + operator + ' ' + str(number2)
     if operator == '+':
         true_answer = number1 + number2
@@ -39,10 +44,12 @@ def in_cycle():
         true_answer = number1 * number2
     return number, true_answer
 
+
 def main():
     condition = 'What is the result of the expression?'
     input_type = 'integer'
     game_body(condition, input_type, in_cycle)
+
 
 if __name__ == '__main__':
     main()
