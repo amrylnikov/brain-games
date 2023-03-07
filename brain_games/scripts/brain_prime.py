@@ -47,10 +47,9 @@ def prime():
 
 
 def main():
-    condition = ('Answer \"yes\" if given number\
-                  is prime. Otherwise answer \"no\".')
+    c = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'
     input_type = 'string'
-    game_body(condition, input_type, prime)
+    game_body(c, input_type, prime)
 
 
 if __name__ == '__main__':
