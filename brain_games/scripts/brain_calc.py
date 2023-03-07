@@ -20,9 +20,14 @@ def game_body(condition_outrut, input_type, generation_func):
             print('Correct!')
             counter += 1
         else:
-            print('\'', answer, '\' is wrong answer ;(. Correct answer was \'', true_answer, '\'.', 
+            print('\'', answer,
+                  '\' is wrong answer ;(. Correct answer was \'',
+                  true_answer, '\'.',
                   '\nLet\'s try again, ', name, '!', sep = '')
             break
+    if counter == 3:
+        print('Congratulations, Sam!')
+
 
 def calc():
     number1 = random.randint(0,20)
@@ -39,10 +44,12 @@ def calc():
         true_answer = number1 * number2
     return number, true_answer
 
+
 def main():
     condition = 'What is the result of the expression?'
     input_type = 'integer'
     game_body(condition, input_type, calc)
+
 
 if __name__ == '__main__':
     main()

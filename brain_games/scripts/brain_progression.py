@@ -20,9 +20,14 @@ def game_body(condition_outrut, input_type, generation_func):
             print('Correct!')
             counter += 1
         else:
-            print('\'', answer, '\' is wrong answer ;(. Correct answer was \'', true_answer, '\'.', 
+            print('\'', answer,
+                  '\' is wrong answer ;(. Correct answer was \'',
+                  true_answer, '\'.',
                   '\nLet\'s try again, ', name, '!', sep = '')
             break
+    if counter == 3:
+        print('Congratulations, Sam!')
+
 
 def progression():
     progression_length = random.randint(5, 10)
@@ -42,10 +47,12 @@ def progression():
     a[hidden_number] = '..'
     return question_string, true_answer
 
+
 def main():
     condition = 'What number is missing in the progression?'
     input_type = 'integer'
     game_body(condition, input_type, progression)
+
 
 if __name__ == '__main__':
     main()
