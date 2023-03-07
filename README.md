@@ -6,3 +6,15 @@ Linter:
 
 Video of working process brain-even:
 https://asciinema.org/a/dZv4OT4skrs16ZMNFTcLA7Tcq
+
+Video of working process brain-calc:
+https://asciinema.org/a/vCsFhKtJ4uEMbAMYSDWDy7jRL
+
+Video of working process brain-gcd:
+https://asciinema.org/a/t0x3s6tqsV6bcpN5D9fI6BznG
+
+Video of working process brain-progression:
+https://asciinema.org/a/ILhj3JjrgWvyaomHHBT6CVD9f
+
+Video of working process brain-prime:
+https://asciinema.org/a/ZtRGvTPhFxjtsA4oBttpIyOee
