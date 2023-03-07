@@ -23,18 +23,17 @@ def game_body(condition_outrut, input_type, generation_func):
             print('\'', answer,
                   '\' is wrong answer ;(. Correct answer was \'',
                   true_answer, '\'.',
-                  '\nLet\'s try again, ', name, '!', sep = '')
+                  '\nLet\'s try again, ', name, '!', sep='')
             break
     if counter == 3:
-        print('Congratulations, Sam!')
+        print('Congratulations, ', name, '!', sep='')
 
 
 def calc():
-    number1 = random.randint(0,20)
-    number2 = random.randint(0,10)
-    options = '+','-','*'
+    number1 = random.randint(0, 20)
+    number2 = random.randint(0, 10)
+    options = '+', '-', '*'
     operator = random.choice(options)
-    print (operator)
     number = str(number1) + ' ' + operator + ' ' + str(number2)
     if operator == '+':
         true_answer = number1 + number2
