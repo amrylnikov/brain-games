@@ -4,5 +4,5 @@
 Linter:
 <a href="https://codeclimate.com/github/amrylnikov/python-project-49/maintainability"><img src="https://api.codeclimate.com/v1/badges/c448c1161a3c051e1460/maintainability" /></a>
 
-Video of working process:
-https://asciinema.org/a/eAjq1p5b1i4V1iLEaUGuoZL8M
+Video of working process brain-even:
+https://asciinema.org/a/dZv4OT4skrs16ZMNFTcLA7Tcq
