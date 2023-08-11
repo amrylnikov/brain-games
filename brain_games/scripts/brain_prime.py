@@ -3,27 +3,27 @@ import random
 from brain_games.scripts.engine import game_body
 
 
-def is_prime(a):
-    Flag = False
-    for i in range(2, a // 2 + 1):
-        if (a % i == 0):
-            Flag = True
-    if (Flag):
+def is_prime(var):
+    is_prime = False
+    for i in range(2, var // 2 + 1):
+        if (var % i == 0):
+            (is_prime) = True
+    if (is_prime):
         return 'no'
     else:
         return 'yes'
 
 
 def prime():
-    number = random.randint(0, 100)
-    true_answer = is_prime(number)
-    return number, true_answer
+    question = random.randint(0, 100)
+    true_answer = is_prime(question)
+    return question, true_answer
 
 
 def main():
-    c = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'
+    condition = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'
     input_type = 'string'
-    game_body(c, input_type, prime)
+    game_body(condition, input_type, prime)
 
 
 if __name__ == '__main__':

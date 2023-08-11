@@ -8,8 +8,8 @@ def game_body(condition_output, input_type, generation_func):
     print(condition_output)
     counter = 0
     while counter < 3:
-        number, true_answer = generation_func()
-        print('Question:', number)
+        question, true_answer = generation_func()
+        print('Question:', question)
         if input_type == 'string':
             answer = prompt.string('Your answer: ')
         else:
