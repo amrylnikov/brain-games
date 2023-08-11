@@ -1,6 +1,6 @@
 import random
 
-from brain_games.scripts.functions.game_body import game_body
+from brain_games.scripts.engine import game_body
 
 
 def calc():
