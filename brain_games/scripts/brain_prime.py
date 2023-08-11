@@ -21,7 +21,8 @@ def prime():
 
 
 def main():
-    condition = 'Answer \"yes\" if given number is prime. Otherwise answer \"no\".'
+    condition = 'Answer \"yes\" if given number is prime. Otherwise answer ' \
+                '\"no\".'
     input_type = 'string'
     game_body(condition, input_type, prime)
 
