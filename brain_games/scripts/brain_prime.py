@@ -1,34 +1,27 @@
 import random
+import math
 
 from brain_games.scripts.engine import run
 
 
 def is_prime(num):
-    # считает и отрицательные, а низзя.
-    is_prime = False
-    # Можно сделать алгоритм проще. Погугли
-    for i in range(2, num // 2 + 1):
-        if (num % i == 0):
-            (is_prime) = True
-            # если нашёл ретёрн делай
-    # иначе ретёрн фалс
-    if (is_prime):
-        # Пусть отдаёт логические значегия, иначе грустно
-        return 'no'
-    else:
-        return 'yes'
+    for i in range(2, int(math.sqrt(num)) + 1):
+        if num % i == 0:
+            return False
+    return True
 
 
 def prime():
     question = random.randint(0, 100)
-    true_answer = is_prime(question)
+    true_answer = 'yes' if is_prime(question) else 'no'
     return question, true_answer
 
 
 def main():
-    # неправильно перенёс, погугли как надо
-    condition = 'Answer \"yes\" if given number is prime. Otherwise answer ' \
-                '\"no\".'
+    condition = (
+        "Answer \"yes\" if given number is prime. Otherwise answer "
+        "\"no\"."
+    )
     run(condition, prime)
 
 
