@@ -9,19 +9,13 @@ def progression():
     progression_step = random.randint(0, 10)
     hidden_index = random.randint(0, progression_length - 1)
 
-    # можно переписать попитонистей
-    display_list = [0] * progression_length
-    question = ''
-    for i in range(progression_length):
-        display_list[i] = str(first_number + progression_step * (i + 1))
-        if i == hidden_index:
-            question += '..' + ' '
-        else:
-            question += display_list[i] + ' '
-
-    true_answer = int(display_list[hidden_index])
-    display_list[hidden_index] = '..'
-    return question, str(true_answer)
+    question = ' '.join([
+        str(first_number + progression_step * (i + 1))
+        if i != hidden_index else '..'
+        for i in range(progression_length)
+    ])
+    true_answer = str(first_number + progression_step * (hidden_index + 1))
+    return question, true_answer
 
 
 def main():

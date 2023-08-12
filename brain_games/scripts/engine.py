@@ -1,7 +1,6 @@
 import prompt
 
 
-# переименовать в run
 # надо передавать... модуль?
 def run(condition_output, generation_func):
     print('Welcome to the Brain Games!')
