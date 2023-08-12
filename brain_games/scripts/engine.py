@@ -1,26 +1,29 @@
 import prompt
 
 
-def game_body(condition_output, input_type, generation_func):
+# переименовать в run
+# надо передавать... модуль?
+def run(condition_output, generation_func):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello,', name)
     print(condition_output)
     counter = 0
+    # вместо while -> for i in range 3
     while counter < 3:
         question, true_answer = generation_func()
         print('Question:', question)
-        if input_type == 'string':
-            answer = prompt.string('Your answer: ')
-        else:
-            answer = prompt.integer('Your answer: ')
+        # без инпут тайпа, всегда стринг передавай и выдавай
+        answer = prompt.string('Your answer: ')
         if answer == true_answer:
             print('Correct!')
             counter += 1
         else:
+            # переписать в строковом варианте (f который)
             print('\'', answer,
                   '\' is wrong answer ;(. Correct answer was \'',
                   true_answer, '\'.',
+                #   И это вторым принтом через f, ибо читается проще
                   '\nLet\'s try again, ', name, '!', sep='')
             break
     if counter == 3:

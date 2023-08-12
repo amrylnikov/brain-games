@@ -1,14 +1,19 @@
 import random
 
-from brain_games.scripts.engine import game_body
+from brain_games.scripts.engine import run
 
 
-def is_prime(var):
+def is_prime(num):
+    # считает и отрицательные, а низзя. 
     is_prime = False
-    for i in range(2, var // 2 + 1):
-        if (var % i == 0):
+    # Можно сделать алгоритм проще. Погугли
+    for i in range(2, num // 2 + 1):
+        if (num % i == 0):
             (is_prime) = True
+            # если нашёл ретёрн делай
+    # иначе ретёрн фалс
     if (is_prime):
+        # Пусть отдаёт логические значегия, иначе грустно
         return 'no'
     else:
         return 'yes'
@@ -21,10 +26,10 @@ def prime():
 
 
 def main():
+    # неправильно перенёс, погугли как надо
     condition = 'Answer \"yes\" if given number is prime. Otherwise answer ' \
                 '\"no\".'
-    input_type = 'string'
-    game_body(condition, input_type, prime)
+    run(condition, prime)
 
 
 if __name__ == '__main__':
