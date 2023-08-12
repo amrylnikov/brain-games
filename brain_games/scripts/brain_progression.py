@@ -1,26 +1,9 @@
-import random
-
 from brain_games.scripts.engine import run
-
-
-def progression():
-    progression_length = random.randint(5, 10)
-    first_number = random.randint(0, 10)
-    progression_step = random.randint(0, 10)
-    hidden_index = random.randint(0, progression_length - 1)
-
-    question = ' '.join([
-        str(first_number + progression_step * (i + 1))
-        if i != hidden_index else '..'
-        for i in range(progression_length)
-    ])
-    true_answer = str(first_number + progression_step * (hidden_index + 1))
-    return question, true_answer
+from brain_games.games import brain_progression_game
 
 
 def main():
-    condition = 'What number is missing in the progression?'
-    run(condition, progression)
+    run(brain_progression_game)
 
 
 if __name__ == '__main__':

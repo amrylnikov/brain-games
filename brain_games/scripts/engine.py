@@ -2,13 +2,26 @@ import prompt
 
 
 # надо передавать... модуль?
-def run(condition_output, generation_func):
+def run(module):
     print('Welcome to the Brain Games!')
     name = prompt.string('May I have your name? ')
     print('Hello,', name)
-    print(condition_output)
+    print(module.DESCRIPTION)
+
+    function = None
+
+    for attr_name in dir(module):
+        attr = getattr(module, attr_name)
+        if callable(attr):
+            function = attr
+            break
+
+    if function is None:
+        print("No callable function found in the module!")
+        return
+
     for _ in range(3):
-        question, true_answer = generation_func()
+        question, true_answer = function()
         print('Question:', question)
         answer = prompt.string('Your answer: ')
         if answer == true_answer:
