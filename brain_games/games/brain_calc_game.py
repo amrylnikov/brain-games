@@ -3,7 +3,7 @@ import random
 DESCRIPTION = 'What is the result of the expression?'
 
 
-def calc():
+def generate_question_and_answer():
     number1 = random.randint(0, 20)
     number2 = random.randint(0, 10)
     options = '+', '-', '*'
