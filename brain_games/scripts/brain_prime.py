@@ -4,7 +4,7 @@ from brain_games.scripts.engine import run
 
 
 def is_prime(num):
-    # считает и отрицательные, а низзя. 
+    # считает и отрицательные, а низзя.
     is_prime = False
     # Можно сделать алгоритм проще. Погугли
     for i in range(2, num // 2 + 1):

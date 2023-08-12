@@ -23,7 +23,7 @@ def run(condition_output, generation_func):
             print('\'', answer,
                   '\' is wrong answer ;(. Correct answer was \'',
                   true_answer, '\'.',
-                #   И это вторым принтом через f, ибо читается проще
+                  # И это вторым принтом через f, ибо читается проще
                   '\nLet\'s try again, ', name, '!', sep='')
             break
     if counter == 3:
