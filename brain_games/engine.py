@@ -1,13 +1,13 @@
 import prompt
 
+from brain_games.cli import welcome_user
 
-def run(module):
-    print('Welcome to the Brain Games!')
-    name = prompt.string('May I have your name? ')
-    print('Hello,', name)
-    print(module.DESCRIPTION)
+
+def run(game_module):
+    name = welcome_user()
+    print(game_module.DESCRIPTION)
     for _ in range(3):
-        question, true_answer = module.generate_question_and_answer()
+        question, true_answer = game_module.generate_question_and_answer()
         print('Question:', question)
         answer = prompt.string('Your answer: ')
         if answer == true_answer:
