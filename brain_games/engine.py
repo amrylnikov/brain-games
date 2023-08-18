@@ -2,20 +2,20 @@ import prompt
 
 from brain_games.cli import welcome_user
 
+CYCLE_NUMBER = 3
+
 
 def run(game_module):
     name = welcome_user()
     print(game_module.DESCRIPTION)
-    for _ in range(3):
-        question, true_answer = game_module.generate_question_and_answer()
+    for _ in range(CYCLE_NUMBER):
+        question, answer = game_module.generate_question_and_answer()
         print('Question:', question)
-        answer = prompt.string('Your answer: ')
-        if answer == true_answer:
+        user_answer = prompt.string('Your answer: ')
+        if user_answer == answer:
             print('Correct!')
         else:
-            return print(
-                f"\'{answer}\' is wrong answer ;(. Correct answer was "
-                f"\'{true_answer}\'."
-                f"\nLet\'s try again, {name}!"
-            )
+            print(f"\'{user_answer}\' is wrong answer ;(. Correct ", end="")
+            print(f"answer was \'{answer}\'.\nLet\'s try again, {name}!")
+            return
     print('Congratulations, ', name, '!', sep='')

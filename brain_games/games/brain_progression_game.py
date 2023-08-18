@@ -9,10 +9,11 @@ def generate_question_and_answer():
     progression_step = random.randint(0, 10)
     hidden_index = random.randint(0, progression_length - 1)
 
-    question = ' '.join([
+    progression_list = [
         str(first_number + progression_step * (i + 1))
-        if i != hidden_index else '..'
         for i in range(progression_length)
-    ])
-    true_answer = str(first_number + progression_step * (hidden_index + 1))
-    return question, true_answer
+    ]
+    progression_list[hidden_index] = '..'
+    question = ' '.join(progression_list)
+    answer = str(first_number + progression_step * (hidden_index + 1))
+    return question, answer
