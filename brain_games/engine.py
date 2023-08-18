@@ -12,10 +12,9 @@ def run(game_module):
         question, answer = game_module.generate_question_and_answer()
         print('Question:', question)
         user_answer = prompt.string('Your answer: ')
-        if user_answer == answer:
-            print('Correct!')
-        else:
+        if user_answer != answer:
             print(f"\'{user_answer}\' is wrong answer ;(. Correct ", end="")
             print(f"answer was \'{answer}\'.\nLet\'s try again, {name}!")
             return
+        print('Correct!')
     print('Congratulations, ', name, '!', sep='')
