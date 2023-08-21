@@ -13,7 +13,7 @@ def generate_question_and_answer():
         str(first_number + progression_step * (i + 1))
         for i in range(progression_length)
     ]
+    answer = progression_list[hidden_index]
     progression_list[hidden_index] = '..'
     question = ' '.join(progression_list)
-    answer = str(first_number + progression_step * (hidden_index + 1))
     return question, answer
